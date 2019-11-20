@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+
+<!-- AppsFlyer web SDK -->
+<script src="https://cdn.appsflyer.com/wa/sdk.js?af_id=c80ad8cb-6f3e-4dc4-b0d4-6ba9d92cc636"></script>
+<script>window.AF=window.AF||{_type:"q",q:[],event:function(i){this.q.push(i)},
+identify:function(i){this.q.push({id:i})}};
+AF.identify('454545');</script>
+
+        <script>
+          !function(e,n,t){!function(e,n,t,r,a){
+          var s=(e[n]=e[n]||{})[t]=function(){(s._q=s._q||[]).push(Array.prototype.slice.call(arguments))};
+          s.webkey=a;
+          for(var i=0;i<r.length;i++)
+          s[r[i]]=function(n)
+          {return function()
+          {var e=Array.prototype.slice.call(arguments);
+          return e.unshift(n),(s._q=s._q||[]).push(e),s}}
+          (r[i])}(e,"AF","Banner",["showBanner","hideBanner","disableBanners","disableTracking","setAdditionalParams"],t),
+          function(e,n,t){var r=e.createElement("script");
+          r.type="text/javascript",r.async=!0,r.src=n+(t?"?webkey="+t:"");
+          var a=e.getElementsByTagName("script")[0];
+          a.parentNode.insertBefore(r,a)}(n,"https://cdn.appsflyer.com/web-sdk/banner/latest/sdk.min.js",t)}(window,document,"c80ad8cb-6f3e-4dc4-b0d4-6ba9d92cc636");
+          window.AF.Banner.showBanner();
+        </script>
+
+
+<TITLE>Appsflyer on the web!!!!</TITLE>
+
+
+</HEAD>
+
+<BODY BGCOLOR="FFFFFF">
+    
+        
+
+<CENTER><IMG SRC="https://i.imgur.com/u2xHXk9.png" ALIGN="BOTTOM"> </CENTER>
+
+<HR>
+
+<p>Welcome to Web Testing, this is auto measured (reload the page with network dev tools on)</p>
+<p>Click the button below to trigger an event</p>
+
+
+<p id="placeholder"></p>
+<button onclick="myFunction()">Click to Triger Event</button>       
+
+<script>
+function myFunction()
+{
+        document.getElementById("placeholder").innerHTML = 'Event Sent';
+     AF.event({action: 'test_event'})
+}
+</script>
+
+
+
+</BODY>
+
+</HTML>
